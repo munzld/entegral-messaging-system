@@ -1,0 +1,16 @@
+# Base Config
+spring.mail:
+  host: smtp.gmail.com
+  port: 587
+  username: munnsld@gmail.com
+  password:
+  properties.mail.smtp:
+    auth: true
+    starttls.enable: true
+logging:
+  pattern:
+    file: "%date{ISO8601} %-5level %logger{15} - %msg +[%replace(%mdc){'[\r\n]', '_'}] #[%marker]%n%rEx{15}"
+    console: "%date{ISO8601} %-5level %logger{15} - %msg +[%mdc] #[%marker]%n%rEx{15}"
+  level:
+    root: INFO
+    com.example.entegralmessagingsystem: DEBUG
